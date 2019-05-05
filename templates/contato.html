@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<main id="mainNormal" class="mainPrincipal">
+                <article class="contatos">
+                    <h1>Contato</h1>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Autor</th>
+                                <th scope="col">E-mail</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Jean Moraes</td>
+                                <td>jeanjms.1999@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Lucas Bichona</td>
+                                <td>lucasbichona@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Shiritokem</td>
+                                <td>shirito@gmail.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr>
+                    <br>
+                    <form method="post">
+                        <input type="text" name="nome" placeholder="Nome: " required><br>
+                        <input type="email" name="email" placeholder="E-mail (Destinatário): " required><br>
+                        <input type="email" name="email" placeholder="E-mail (Remetente): " required><br>
+                        <input type="text" name="assunto" placeholder="Assunto: " required><br>
+                        <textarea maxlength="280" placeholder="Deixe sua mensagem: "></textarea><br>
+                        <button name="enviar" value="Enviar">Enviar</button>
+                    </form>
+                </article>
+            </main>
+
+{% endblock %}
