@@ -1,11 +1,6 @@
-from flask import Flask, request, render_template
+import os
+from app import create_app, db
+from app.models import User, Role
+from flask_migrate import Migrate
 
-app = Flask(__name__)
-
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-@app.route('/user/<name>')
-def user(name):
-    return render_template('user.html', name=name)
+app = create_app()

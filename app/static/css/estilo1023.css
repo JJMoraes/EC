@@ -1,0 +1,59 @@
+header{
+    width: 90%;
+    height: 130px;
+}
+
+#menu-horizontal{
+    width: 90%;
+}
+
+.busca{
+    margin: 12px 0px 0px 22%;
+    width:40%;
+}
+
+.busca input{
+    width: 70%;
+}
+
+.busca button{
+    width: 25%;
+}
+
+.contato {
+    right: 7%;
+}
+#container{
+    width: 90%;
+}
+
+#banner{
+    margin-left: 5%;
+    margin-bottom: 40px;
+    width: 69%;
+}
+
+#banner img {
+    width: 100%;
+}
+
+#container{
+    margin-top: 3%;
+}
+
+.secundarios img{
+    width: 37%;
+}
+
+.desenho{
+    width: 80%;
+}
+
+.nomeDataSecundario{
+    margin-top: 5px;
+    width: 100%;
+}
+
+.shareIcons li img{
+    width: 4.5%;
+}

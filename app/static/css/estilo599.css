@@ -1,0 +1,193 @@
+header{
+    width: 98%;
+    margin-bottom: 0px;
+}
+
+#menu-horizontal{
+    width: 98%;
+}
+
+#cruzLogo img{
+    margin-left: 2%;
+}
+
+#cruzLogo div {
+    display: none;
+    margin-left: 0%;
+}
+
+#buscaAberta{
+    display: none;
+}
+
+#menuEscondido{
+    display: block;
+    margin: 0px auto 10px auto;
+    width: 98%;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#menuEscondido img{
+    margin-left: 1%;
+}
+
+#menuEscondido form{
+    display: inline-block;
+    width: 65%;
+    float: right;
+    text-align: right;
+    margin: 0px 2% 0px 0px;
+    height: 28px;
+}
+
+.buscaEsconde{
+    width: 0%;
+    border: 0px;
+}
+
+.buscaExpande{
+    height: 26px;
+    width: 88%;
+    border-radius: 8px;
+    border: 1px solid red;
+    display: inline;
+    float: left;
+}
+
+.contato{
+    right: 4%;
+}
+
+#container{
+    width: 98%;
+}
+
+.menuLateral {
+    width: 38%;
+    background-color: red;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.menuLateral nav{
+    margin-top: 0px;
+}
+
+.menuLateral nav p{
+    background-color: white;
+    border: 1px solid red;
+    color: red;
+}
+
+.menuLateral nav ul li a{
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.menuLateral nav ul li a:hover{
+    color: blue;
+    border-bottom: 1px solid blue;
+}
+
+.menuSome{
+    display: none;
+}
+
+.mainPrincipal{
+    margin-left: 1%;
+    width: 98%;
+}
+
+.mainPrincipal section{
+    margin-left: 0%;
+}
+
+.menuAparece{
+    position: absolute;
+    z-index: 5000;
+    left: 0;
+}
+
+.secundarios{
+    display: inline-block;
+    width: 48%;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 1%;
+}
+
+.secundarios img{
+    width: 37%;
+}
+
+#cruzLogo div {
+    margin-left: 11%;
+}
+
+.desenho{
+    width: 79%;
+}
+
+.nomeDataSecundario{
+    width: 100%;
+    margin-top: 10px;
+}
+
+footer{
+    width: 98%;
+}
+
+.link{
+    text-align: center;
+    width: 97%;
+    padding: 1%;
+    margin-bottom: 20px;
+}
+
+.linkImagem{
+    display: block;
+    width: 97%;
+    float: none;
+    margin-right: 0%;
+    margin-bottom: 15px;
+}
+
+.link h1{
+    width: 97%;
+    color: black;
+    font-size: 1.2em;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.link p{
+    display: inline-block;
+    width: 97%;
+}
+
+.materiaAberta div{
+    width: 93%;
+}
+
+.materiaAberta h1{
+    font-size: 2.3em;
+}
+
+.shareIcons li img{
+    width: 6%;
+}
+
+.linhaBloco{
+    width: 95%;
+}
+
+.contatos form button{
+    border-radius: 8px;
+    border: 1px solid red;
+    background-color: white;
+    width: 15%;
+    height: 30px;
+}

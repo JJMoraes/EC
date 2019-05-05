@@ -1,0 +1,124 @@
+header{
+    width: 98%;
+    margin-bottom: 0px;
+}
+
+#menu-horizontal{
+    width: 98%;
+}
+
+#buscaAberta{
+    display: none;
+}
+
+.aparece{
+    display: block;
+}
+
+#menuEscondido{
+    display: block;
+    margin: 0px auto 10px auto;
+    width: 98%;
+    border-bottom: 1px solid red;
+    border-top: 1px solid red;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#menuEscondido img{
+    margin-left: 2%;
+}
+
+#menuEscondido form{
+    width: 30%;
+    float: right;
+    margin-top:0px;
+    text-align: right;
+    position: initial;
+    margin: 0px 2% 0px 0px;
+    width: 45%;
+    padding: 0px;
+}
+
+#menuEscondido form input{
+    display: inline;
+    width: 0%;
+    border: 0px;
+    text-align: right;
+}
+
+.contato{
+    right: 4%;
+}
+
+#container{
+    width: 98%;
+}
+
+.secundarios{
+    display: inline-block;
+    width: 48%;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 1%;
+}
+
+.secundarios img{
+    width: 37%;
+}
+
+#cruzLogo div {
+    margin-left: 11%;
+}
+
+.desenho{
+    width: 78.3%;
+}
+
+.nomeDataSecundario{
+    width: 100%;
+}
+
+footer{
+    width: 98%;
+}
+
+.link{
+    width: 97%;
+    padding: 1%;
+    margin-bottom: 20px;
+}
+
+.linkImagem{
+    display: block;
+    width: 97%;
+    float: none;
+    margin-right: 0%;
+    margin-bottom: 15px;
+}
+
+.link h1{
+    width: 97%;
+    color: black;
+    font-size: 1.2em;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.link p{
+    display: inline-block;
+    width: 97%;
+}
+
+.materiaAberta div{
+    width: 98%;
+}
+
+.materiaAberta h1{
+    margin: 0px 0px 0px 1.5%;
+    font-size: 1.9em;
+}
+
+.shareIcons li img{
+    width: 9%;
+}
