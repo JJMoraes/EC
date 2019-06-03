@@ -2,7 +2,7 @@ from flask import session, redirect, url_for, flash, render_template
 from . import main
 from .forms import NameForm
 
-@main.route('/')
+@main.route('/', methods=['GET', 'POST'])
 def index():
     return render_template('index.html')
 
