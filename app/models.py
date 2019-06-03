@@ -1,20 +1,59 @@
 from app import db
 
-class Role(db.Model):
-    __tablename__ = 'roles'
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(64), unique=True)
-    users = db.relationship('User', backref='role')
+class TypeUser(db.Model):
+    __tablename__ = 'typeUser'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True, nullable=False)
+    description = db.Column(db.String(16))
+    user = db.relationship('user', backref='typeUser', lazy=True)
 
     def __repr__(self):
-        return '<Role %r>' % self.name
-
+        return '<TypeUser %r>' % self.description
 
 class User(db.Model):
-    __tablename__ = 'users'
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(64), unique=True, index=True)
-    role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
+    __tablename__ = 'user'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    name = db.Column(db.String(64), unique=True, index=True)
+    email = db.Column(db.String(64), unique=True)
+    password = db.Column(db.String(64))
+    userStats = db.Column(db.CHAR(1))
+    typeUser = db.Column(db.Integer, db.ForeignKey('typeUser.id'))
+    logs = db.relationship('Logs', backref='user', lazy=True)
+    articles = db.relationship('Articles', backref='user', lazy=True)
 
     def __repr__(self):
-        return '<User %r>' % self.username
+        return '<User %r>' % self.name
+
+
+class Log(db.Model):
+    __tablename__ = 'log'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    dateIn = db.Column(db.DateTime)
+    dateOut = db.Column(db.DateTime)
+    user = db.Column(db.Integer, db.ForeignKey('user.id'))
+
+    def __repr__(self):
+        return '<Log %r>' % self.user
+
+
+class Articles(db.Model):
+    __tablename__ = 'articles'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    title = db.Column(db.String(64))
+    date = db.Column(db.Date)
+    image = db.Column(db.String(100))
+    lide = db.Column(db.String(240))
+    text = db.Column(db.Text)
+    author = db.Column(db.Integer, db.ForeignKey('user.id'))
+
+    def __repr__(self):
+        return '<Article %r>' % self.title
+
+
+class AdSense(db.Model):
+    __tablename__ = 'adSense'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    image = db.Column(db.String(100))
+    description = db.Column(db.String(64))
+
+    def __repr__(self):
+        return '<AdSense %r>'%self.id
