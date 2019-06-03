@@ -4,3 +4,4 @@ from app.models import User, Role
 from flask_migrate import Migrate
 
 app = create_app()
+string = 'ViniciusViadao'
