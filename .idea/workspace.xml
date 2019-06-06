@@ -25,7 +25,11 @@
     <select />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf />
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+>>>>>>> 3ae36097188f7dd41406aeab5bd3db46fc0f6c5c
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -49,12 +53,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/.gitignore" />
+=======
+        <option value="$PROJECT_DIR$/teste.py" />
+>>>>>>> 3ae36097188f7dd41406aeab5bd3db46fc0f6c5c
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/app/main/viwes.py" />
         <option value="$PROJECT_DIR$/app/main/models.py" />
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/app/main/forms.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/__init__.py" />
         <option value="$PROJECT_DIR$/app/main/__init__.py" />
         <option value="$PROJECT_DIR$/app/main/views.py" />
@@ -71,6 +80,12 @@
         <option value="$USER_HOME$/Mickael_redes3/funcoes.py" />
         <option value="$USER_HOME$/Mickael_redes3/principal.py" />
         <option value="$USER_HOME$/Mickael_redes3/scratch_3.py" />
+=======
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/app/main/views.py" />
+        <option value="$PROJECT_DIR$/app/templates/base.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+>>>>>>> 3ae36097188f7dd41406aeab5bd3db46fc0f6c5c
       </list>
     </option>
   </component>
@@ -87,7 +102,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -95,18 +109,56 @@
               <item name="EC" type="b2602c69:ProjectViewProjectNode" />
               <item name="EC" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
+=======
+            <path>
+              <item name="EC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EC" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EC" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EC" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EC" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EC" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+>>>>>>> 3ae36097188f7dd41406aeab5bd3db46fc0f6c5c
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="last_opened_file_path" value="$USER_HOME$/Mickael_redes3" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+>>>>>>> 3ae36097188f7dd41406aeab5bd3db46fc0f6c5c
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -265,6 +317,7 @@
       <option name="presentableId" value="Default" />
       <updated>1557023329708</updated>
       <workItem from="1557023332875" duration="1408000" />
+<<<<<<< HEAD
       <workItem from="1557064170003" duration="9311000" />
       <workItem from="1557079012748" duration="3208000" />
       <workItem from="1557090891510" duration="8131000" />
@@ -281,16 +334,29 @@
       <workItem from="1558208917848" duration="18386000" />
       <workItem from="1559606162425" duration="547000" />
       <workItem from="1559769382692" duration="619000" />
+=======
+      <workItem from="1557064170003" duration="4921000" />
+      <workItem from="1559565456375" duration="2457000" />
+>>>>>>> 3ae36097188f7dd41406aeab5bd3db46fc0f6c5c
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="67936000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24508321" />
+=======
+    <option name="totallyTimeSpent" value="8786000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="-1" width="1920" height="1053" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22572039" />
+>>>>>>> 3ae36097188f7dd41406aeab5bd3db46fc0f6c5c
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -303,9 +369,15 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5030257" side_tool="true" weight="0.32843137" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.41993463" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32843137" />
+=======
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32831" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+>>>>>>> 3ae36097188f7dd41406aeab5bd3db46fc0f6c5c
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -690,6 +762,7 @@
     <SUITE FILE_PATH="coverage/EC$Funcoes_Cpf.coverage" NAME="Funcoes_Cpf Coverage Results" MODIFIED="1557354042886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Mickael_redes3" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/venv/pyvenv.cfg">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -703,6 +776,12 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/venv/pyvenv.cfg" />
+    <entry file="file://$PROJECT_DIR$/venv/Scripts/activate" />
+    <entry file="file://$PROJECT_DIR$/teste.py" />
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/wtforms/__init__.py" />
+>>>>>>> 3ae36097188f7dd41406aeab5bd3db46fc0f6c5c
     <entry file="file://$PROJECT_DIR$/app/templates/contato.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -726,6 +805,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/sqlalchemy/sql/sqltypes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -743,6 +823,9 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/../Flask/templates/index.html" />
+>>>>>>> 3ae36097188f7dd41406aeab5bd3db46fc0f6c5c
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -802,8 +885,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/main/views.py">
+    <entry file="file://$PROJECT_DIR$/app/static/css/estilo.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="85">
           <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding>
@@ -830,11 +917,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="25" selection-start-line="25" selection-end-line="26" />
+=======
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/main/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+          </folding>
+>>>>>>> 3ae36097188f7dd41406aeab5bd3db46fc0f6c5c
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="106">
           <caret line="1734" selection-start-line="1734" selection-end-line="1734" />
         </state>
@@ -872,12 +974,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="935">
           <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
+=======
+        <state relative-caret-position="75">
+          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+>>>>>>> 3ae36097188f7dd41406aeab5bd3db46fc0f6c5c
           <folding>
             <element signature="e#18#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_5.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="530">
@@ -887,6 +994,19 @@
           </folding>
         </state>
       </provider>
+=======
+    <entry file="file://$PROJECT_DIR$/app/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="123" column="14" lean-forward="true" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/css/estilo599.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2396" />
+      </provider>
+>>>>>>> 3ae36097188f7dd41406aeab5bd3db46fc0f6c5c
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/datetime.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -914,8 +1034,30 @@
     </entry>
     <entry file="file://$USER_HOME$/Mickael_redes3/principal.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="530">
           <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
+=======
+        <state relative-caret-position="255">
+          <caret line="17" column="164" selection-start-line="17" selection-start-column="164" selection-end-line="17" selection-end-column="164" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+>>>>>>> 3ae36097188f7dd41406aeab5bd3db46fc0f6c5c
         </state>
       </provider>
     </entry>
