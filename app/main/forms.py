@@ -3,6 +3,6 @@ from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 
 
-class NameForm(FlaskForm):
-    name = StringField('Qual o seu nome?', validators=[DataRequired()])
-    submit = SubmitField('Enviar')
+class SearchForm(FlaskForm):
+    search = StringField('', validators=[DataRequired()])
+    submit = SubmitField('BUSCAR')

@@ -7,12 +7,9 @@
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilo.css') }}">
         <script src="{{ url_for('static', filename='js/menuJs.js') }}"></script>
         <link rel="icon" href="{{ url_for('static', filename='icones/logoIcone.ico') }}" type="image/x-icon">
-<<<<<<< HEAD
         <link href="{{ url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet" type="text/css"/>
-=======
         <link rel="shortcut icon" href="{{ url_for('static', filename='icones/logoIcone.ico') }}" type="image/x-icon">
         <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet" type="text/css">
->>>>>>> 3ae36097188f7dd41406aeab5bd3db46fc0f6c5c
         <link media="screen and (max-width:319px)" rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilo319.css') }}">
         <link media="screen and (min-width:320px) and (max-width:479px)" rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilo479.css') }}">
         <link media="screen and (min-width:480px) and (max-width:599px)" rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilo599.css') }}">
@@ -30,7 +27,7 @@
                     <li><a href='#'><img src="{{ url_for('static', filename='icones/twitter.png') }}"></a></li>
                 </ul>
 
-                <form id="buscaAberta" class="busca" method="get" action='paginaBusca.html'>
+                <form id="buscaAberta" class="busca" method="get" action="/search">
                     <input type="text" name="textoBusca">
                     <button form="buscaAberta">BUSCAR</button>
                 </form>
@@ -38,7 +35,7 @@
                 <ul class="contato">
                     <li><a href='index.html'>HOME</a></li>
                     <li><a href='sobre.html'>SOBRE</a></li>
-                    <li><a href='contato.html'>CONTATO</a></li>
+                    <li><a href='/contato'>CONTATO</a></li>
                 </ul>
             </nav>
 
