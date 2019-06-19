@@ -6,16 +6,16 @@ from app.models import User
 
 
 class RegistrationForm(FlaskForm):
-    username = StringField('Usuário', validators=[
+    username = StringField('Usuário', render_kw={"placeholder":"Username"}, validators=[
         DataRequired(), Length(1, 64)
     ])
-    email = StringField('E-mail', validators=[
+    email = StringField('E-mail', render_kw={"placeholder":"E-mail"}, validators=[
         DataRequired()
     ])
-    password = PasswordField('Senha', validators=[
+    password = PasswordField('Senha', render_kw={"placeholder":"Senha"}, validators=[
         DataRequired()
     ])
-    password2 = PasswordField('Confirmar Senha', validators=[
+    password2 = PasswordField('Confirmar Senha', render_kw={"placeholder":"Confirmação de Senha"}, validators=[
         DataRequired(), EqualTo('password', message='Senhas não conferem.')
     ])
     submit = SubmitField('Registrar')
@@ -27,10 +27,10 @@ class RegistrationForm(FlaskForm):
 
 
 class LoginForm(FlaskForm):
-    username = StringField('User', validators=[
+    username = StringField('', render_kw={"placeholder":"Username"}, validators=[
         DataRequired()
     ])
-    password = PasswordField('Password', validators=[
+    password = PasswordField('', render_kw={"placeholder":"Password"}, validators=[
         DataRequired()
     ])
-    submit = SubmitField('Login')
+    submit = SubmitField('Enviar')

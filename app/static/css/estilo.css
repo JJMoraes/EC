@@ -446,6 +446,10 @@ footer span{
     text-align: right;
 }
 
+.contatos form label{
+    display: none;
+}
+
 .contatos form input, .contatos form textarea{
     width: 100%;
     border: 1px solid red;
@@ -455,10 +459,59 @@ footer span{
     height: 40px;
 }
 
-.contatos form button{
-    border-radius: 8px;
-    border: 1px solid red;
-    background-color: white;
-    width: 10%;
-    height: 30px;
-}
+ #submit, .contatos form button {
+     border-radius: 8px;
+     border: 1px solid red;
+     background-color: red;
+     color: white;
+     width: 10%;
+     height: 30px;
+     text-align: center;
+ }
+
+ .loginBody{
+     background-color: rgba(114, 122, 106, 0.43);
+ }
+
+ #containerLogin{
+     background-color: whitesmoke;
+     margin: 3% auto 3% auto;
+     width: 60%;
+     border: 1px solid whitesmoke;
+     border-radius: 8px;
+     padding-bottom: 10px;
+ }
+
+ #containerLogin header{
+     width: 85.4%;
+     margin-top: 10px;
+ }
+
+ #containerLogin header img{
+    display: inline-block;
+    min-width: 122px;
+    min-height: 122px;
+    width: 11.5%;
+    height: 11.5%;
+    max-width: 182px;
+    max-width: 182px;
+ }
+
+ #containerLogin main{
+    width: 85.4%;
+    margin: 0 auto;
+ }
+
+ #containerLogin main a{
+    color: black;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.9em;
+    float: right;
+    margin-top: -5px;
+    margin-right: 1%;
+ }
+
+ #containerLogin main a:hover{
+     text-decoration: underline;
+ }

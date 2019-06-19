@@ -21,7 +21,7 @@ def register():
         db.session.commit()
         flash('Usuário registrado!')
         return redirect(url_for('auth.login'))
-    return render_template('auth/register.html', form=form)
+    return render_template('auth/cadastro.html', form=form)
 
 
 @auth.route('/login', methods=['GET', 'POST'])
@@ -37,7 +37,6 @@ def login():
             return redirect(next)
         flash('Invalid username or passoword.')
     return render_template('auth/login.html', form=form)
-
 
 @auth.route('/logout')
 @login_required

@@ -68,32 +68,17 @@
         <div id="container">
             <section id="menuLateral" class="menuLateral menuSome">
                 <nav>
-                    <p>Temas</p>
+                    <p>Funções</p>
                     <ul>
-                        <li><a href="autores.html">Autores</a></li>
-                        <li><a href='#'>Política</a></li>
-                        <li><a href='#'>Filosofia</a></li>
-                        <li><a href='#'>Reflexões</a></li>
-                        <li><a href='#'>Literatura</a></li>
-                        <li><a href='#'>Cinema</a></li>
-                        <li><a href='#'>Música</a></li>
-                        <li><a href='#'>Esportes</a></li>
-                        <li><a href='#'>Tecnologia</a></li>
-                        <li><a href="#">Saúde</a></li>
-                    </ul>
-                </nav>
-                <nav>
-                    <p>Colunas</p>
-                    <ul>
-                        <li><a href="#">link1</a></li>
-                        <li><a href='#'>link1</a></li>
-                        <li><a href='#'>link1</a></li>
-                        <li><a href='#'>link1</a></li>
-                        <li><a href='#'>link1</a></li>
-                        <li><a href='#'>link1</a></li>
-                        <li><a href='#'>link1</a></li>
-                        <li><a href='#'>link1</a></li>
-                        <li><a href='#'>link1</a></li>
+                        <li><a href='/following'>Seguindo</a></li>
+                        <li><a href='/followers'>Seguidores</a></li>
+                        <li><a href='/user/<currentuser>'>Meu Perfil</a></li>
+                        {{ if current_user == 2}}
+                            <li><a href="/users">Usuários</a></li>
+                            <li><a href='/roles'>Grupos</a></li>
+                            <li><a href='/articles'>Artigos</a></li>
+                            <li><a href='/topost'>Escrever</a></li>
+                        {{ endif }}
                     </ul>
                 </nav>
             </section>

@@ -1,6 +1,10 @@
-from flask import session, redirect, url_for, flash, render_template
-from . import main
+from flask import session, redirect, url_for, flash, render_template, request
+from flask_login import login_required, current_user
+from app import db
 from .forms import SearchForm
+from app.models import Article
+
+from . import main
 
 @main.route('/', methods=['GET', 'POST'])
 def index():
@@ -8,11 +12,18 @@ def index():
 
 @main.route('/search', methods=['GET', 'POST'])
 def busca():
+    if request.method == 'POST':
+        dados = request.form
+        posts = Article.query.filter(Article.text.like('%{}%'.format(dados['textoBusca'])))
+        print(posts)
     return render_template('paginaBusca.html')
 
 @main.route('/contato', methods=['GET', 'POST'])
 def contato():
-    return render_template('contato.html')
+    if request.method == 'POST':
+        return render_template('contato.html', mensagem=True)
+
+    return render_template('contato.html', mensagem=False)
 
 @main.route('/sobre', methods=['GET', 'POST'])
 def sobre():
@@ -29,8 +40,3 @@ def materiaAberta():
 @main.route('/autores', methods=['GET', 'POST'])
 def autores():
     return render_template('autores.html')
-
-
-@main.route('/admin')
-def admin():
-    return render_template('index.html')
