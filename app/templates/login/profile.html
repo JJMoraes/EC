@@ -1,10 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "login/base_login.html" %}
 
-</body>
-</html>
+{% block main %}
+    <main id="mainNormal" class="mainPrincipal">
+        <article class="contatos">
+            <h1>Meu Perfil</h1>
+
+            <ul style="display: inline; list-style-type: none">
+                <li>Username: {{ user.name }}</li>
+                <li>Email: {{ user.email }}</li>
+                <li>Status: {{ user.userStats }}</li>
+                <li>Following: xx</li>
+                <li>Followers: xx </li>
+            </ul>
+            <br>
+            <hr>
+            <br>
+            {% if user == current_user %}
+                <a href="{{ url_for('.edit_profile') }}" class="btn btn-dark">Editar</a>
+            {% endif %}
+            {% if current_user.is_administrator() %}
+                <a href="{{ url_for('.edit_profile_admin', id=user.id) }}" class="btn btn-danger">
+                    Editar [ADMIN]
+                </a>
+            {% endif %}
+        </article>
+    </main>
+{% endblock %}

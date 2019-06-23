@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
     font-family: "Times New Roman";
@@ -83,12 +83,12 @@ header{
 }
 
 .contato{
-    top: 15px;
-    right: 9%;
+    top: 12px;
+    right: 8%;
     list-style-type: none;
     display: inline-block;
     text-align: right;
-    width: 200px;
+    width: 235px;
     position: fixed;
 }
 

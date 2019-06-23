@@ -1,0 +1,11 @@
+{% extends "login/base_login.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block main %}
+    <main id="mainNormal" class="mainPrincipal">
+        <article class="contatos">
+            <h1>Editar Perfil - {{ username }}</h1>
+        {{ wtf.quick_form(form) }}
+        </article>
+    </main>
+{% endblock %}

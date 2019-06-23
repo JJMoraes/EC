@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: cafa58eceef4
+Revision ID: 8009b93684eb
 Revises: 
-Create Date: 2019-06-13 09:28:28.700554
+Create Date: 2019-06-22 15:58:31.353303
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'cafa58eceef4'
+revision = '8009b93684eb'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -27,14 +27,19 @@ def upgrade():
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('role',
-    sa.Column('id', sa.Integer(), autoincrement=True, nullable=False),
-    sa.Column('description', sa.String(length=16), nullable=True),
-    sa.PrimaryKeyConstraint('id')
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('name', sa.String(length=64), nullable=True),
+    sa.Column('default', sa.Boolean(), nullable=True),
+    sa.Column('permissions', sa.Integer(), nullable=True),
+    sa.PrimaryKeyConstraint('id'),
+    sa.UniqueConstraint('name')
     )
+    op.create_index(op.f('ix_role_default'), 'role', ['default'], unique=False)
     op.create_table('user',
     sa.Column('id', sa.Integer(), autoincrement=True, nullable=False),
     sa.Column('name', sa.String(length=64), nullable=True),
     sa.Column('email', sa.String(length=64), nullable=True),
+    sa.Column('password_hash', sa.String(length=128), nullable=True),
     sa.Column('userStats', sa.CHAR(length=1), nullable=True),
     sa.Column('userRole', sa.Integer(), nullable=True),
     sa.ForeignKeyConstraint(['userRole'], ['role.id'], ),
@@ -70,6 +75,7 @@ def downgrade():
     op.drop_table('article')
     op.drop_index(op.f('ix_user_name'), table_name='user')
     op.drop_table('user')
+    op.drop_index(op.f('ix_role_default'), table_name='role')
     op.drop_table('role')
     op.drop_table('adSense')
     # ### end Alembic commands ###

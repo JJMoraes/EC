@@ -33,8 +33,13 @@
                 </form>
 
                 <ul class="contato">
+                {% if current_user.is_authenticated %}
+                    <li><a href="/logout">LOGOUT</a></li>
+                    <li><a href="/user/{{ current_user.name }}">PROFILE</a></li>
+                {% else %}
                     <li><a href='/login'>LOGIN</a></li>
                     <li><a href='/sobre'>CADASTRO</a></li>
+                {% endif %}
                     <li><a href='/contato'>CONTATO</a></li>
                 </ul>
             </nav>
@@ -70,18 +75,25 @@
                 <nav>
                     <p>Funções</p>
                     <ul>
+                        <li><a href='/user/{{ current_user.name }}'>Meu Perfil</a></li>
                         <li><a href='/following'>Seguindo</a></li>
                         <li><a href='/followers'>Seguidores</a></li>
-                        <li><a href='/user/<currentuser>'>Meu Perfil</a></li>
-                        {{ if current_user == 2}}
-                            <li><a href="/users">Usuários</a></li>
-                            <li><a href='/roles'>Grupos</a></li>
+                        {% if current_user.has_permission(4) %}
                             <li><a href='/articles'>Artigos</a></li>
                             <li><a href='/topost'>Escrever</a></li>
-                        {{ endif }}
+                            {% if current_user.is_administrator() %}
+                                <li><a href="/users">Usuários</a></li>
+                                <li><a href='/roles'>Grupos</a></li>
+                            {% endif %}
+                        {% endif %}
                     </ul>
                 </nav>
             </section>
+            {% for message in get_flashed_messages() %}
+                <div class="alert alert-warning" style="width: 30%">
+                    {{ message }}
+                </div>
+            {% endfor %}
             {% block main %}
 
             {% endblock %}
