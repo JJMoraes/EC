@@ -3,7 +3,7 @@ from flask_login import login_required, current_user
 from app.decorators import admin_required, permission_required
 from app import db
 from .forms import EditProfileForm, EditProfileAdminForm, RoleForm, ToPostForm, EditPost
-from app.models import User, Role, Article, Follow, Permission
+from app.models import User, Role, Article, Follow, Permission, Log
 import os
 from . import login
 
@@ -109,9 +109,16 @@ def articles():
         page, per_page=5, error_out=False
     )
     articles = articlesPagination.items
-
     return render_template('login/articles.html', articles=articles, pagination=articlesPagination)
 
+@login.route('/trashArticle/<int:id>', methods=['GET', 'POST'])
+@login_required
+@permission_required(Permission.MODERATE)
+def trashArticle(id):
+    article = Article.query.get_or_404(id)
+    db.session.delete(article)
+    db.session.commit()
+    return redirect(url_for('.articles'))
 
 @login.route('/following/<name>', methods=['GET', 'POST'])
 @login_required
@@ -220,3 +227,12 @@ def edit_profile_admin(idUser):
     form.status.data = user.userStats
     return render_template('login/editProfile.html', form=form, name=user.name)
 
+@login.route('/trashUser/<int:id>', methods=['GET', 'POST'])
+@login_required
+@admin_required
+def trashUser(id):
+    user = User.query.get_or_404(id)
+    user.userStats = 'I'
+    db.session.add(user)
+    db.session.commit()
+    return redirect(url_for('.users'))

@@ -12,7 +12,7 @@
                 <th scope="col">E-mail</th>
                 <th scope="col">Status</th>
                 <th scope="col">Role</th>
-                <th scope="col">Delete</th>
+                <th scope="col">Alterar Status</th>
             </tr>
             </thead>
             <tbody>
@@ -22,7 +22,11 @@
                         <td>{{ user[0].email }}</td>
                         <td>{{ user[0].userStats}}</td>
                         <td>{{ user[1].name }}</td>
-                        <td><a href="/trash/{{ user[0].id }}"><img src="{{ url_for('static', filename='icones/trash.png')}}"></a></td>
+                        {% if user[0].userStats == 'A' %}
+                            <td><a href="/trashUser/{{ user[0].id }}"><img src="{{ url_for('static', filename='icones/trash.png')}}"></a></td>
+                        {% else %}
+                            <td><a href="/activeUser/{{ user[0].id }}"><img src="{{ url_for('static', filename='icones/validate.png')}}"></a></td>
+                        {% endif %}
                     </tr>
                 {% endfor %}
             </tbody>

@@ -99,7 +99,7 @@ class User(UserMixin, db.Model):
     userStats = db.Column(db.CHAR(1))
     userRole = db.Column(db.Integer, db.ForeignKey('role.id'))
     logs = db.relationship('Log', backref='userLog', lazy=True)
-    articles = db.relationship('Article', backref='userAuthor', lazy='dynamic')
+    articles = db.relationship('Article', backref='userAuthor', lazy='dynamic', cascade='all, delete-orphan')
     followed = db.relationship(
         'Follow', foreign_keys=[Follow.follower_id],
         backref=db.backref('follower', lazy='joined'),
@@ -203,7 +203,6 @@ class Article(db.Model):
     text = db.Column(db.Text)
     author = db.Column(db.Integer, db.ForeignKey('user.id'))
     category = db.Column(db.Integer, db.ForeignKey('category.id'))
-    #catColumn = db.Column(db.Integer, db.ForeignKey())
 
     def __repr__(self):
         return '<Article %r>'%self.title

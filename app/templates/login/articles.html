@@ -20,7 +20,7 @@
                         <td><a href="/articles/{{ article.id }}">{{ article.title }}</a></td>
                         <td>{{ article.date }}</td>
                         <td>{{ article.name }}</td>
-                        <td><a href="/trash/{{ article.id }}"><img src="{{ url_for('static', filename='icones/trash.png')}}"></a></td>
+                        <td><a href="/trashArticle/{{ article.id }}"><img src="{{ url_for('static', filename='icones/trash.png')}}"></a></td>
                     </tr>
                 {% endfor %}
             </tbody>
