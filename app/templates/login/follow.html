@@ -4,7 +4,7 @@
 {% block main %}
 <main id="mainNormal" class="mainPrincipal">
     <article class="contatos">
-        <h1>Usuários</h1>
+        <h1>{{ titulo }}</h1>
         <table class="table">
             <thead>
             <tr>
@@ -12,23 +12,21 @@
                 <th scope="col">E-mail</th>
                 <th scope="col">Status</th>
                 <th scope="col">Role</th>
-                <th scope="col">Delete</th>
             </tr>
             </thead>
             <tbody>
                 {% for user in users %}
                     <tr>
-                        <td><a href="/user/{{ user[0].name }}">{{ user[0].name }}</a></td>
-                        <td>{{ user[0].email }}</td>
-                        <td>{{ user[0].userStats}}</td>
-                        <td>{{ user[1].name }}</td>
-                        <td><a href="/trash/{{ user[0].id }}"><img src="{{ url_for('static', filename='icones/trash.png')}}"></a></td>
+                        <td><a href="/user/{{ user.name }}">{{ user.name }}</a></td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.userStats}}</td>
+                        <td>{{ user.userRole }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
         </table>
         <div class="paginator">
-                {{ macros.pagination_widget(pagination, '.users') }}
+                {{ macros.pagination_widget(pagination, '.%s'%titulo.lower(), name=name ) }}
         </div>
     </article>
 </main>

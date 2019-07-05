@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% import "paginatorMacro.html" as macros %}
+
+{% block main %}
+
+<main id="mainNormal" class="mainPrincipal">
+            <section>
+                <div>
+                    <p>{{ categoryName }}</p>
+                    <p class="desenho"></p>
+                </div>
+                {% for post in posts %}
+                    <article class="link">
+                        <a href="{{ url_for('main.openArticle', title=post[0].title).replace('%20', '_') }}" class="linkImagem"><img src="{{ url_for('static', filename='images/%s'%post[0].image) }}" alt="{{ post[0].subtitle }}"></a>
+                        <a href="{{ url_for('main.openArticle', title=post[0].title).replace('%20', '_') }}"><h1>{{ post[0].title }}</h1></a>
+                        <p class="nomeDataPrincipal">{{ post.name }} --- <i>{{ post[0].date }}</i></p>
+                        <p class="intro">{{ post[0].lide }}</p>
+                        <br>
+                    </article>
+                {% endfor %}
+            </section>
+            <div class="paginator">
+                {{ macros.pagination_widget(pagination, '.categories', categoryName=categoryName) }}
+            </div>
+        </main>
+{% endblock %}

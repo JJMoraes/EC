@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<main id="mainNormal" class="mainPrincipal">
+                <article class="materiaAberta">
+                    <h1>{{ article.title }}</h1>
+                    <div>
+                        <img src="{{ url_for('static', filename='images/%s'%article.image) }}" alt="{{ article.subtitle }}">
+                        <span>{{ article.lide }}</span>
+                        <p class="nomeDataPrincipal">{{ author }} --- <i>{{ article.date }}</i></p>
+                        <p>{{ article.text }}</p>
+                    </div>
+                    <ul class="shareIcons">
+                        <li><a href="#"><img src="{{ url_for('static', filename='icones/facebook.png') }}"></a></li>
+                        <li><a href='#'><img src="{{ url_for('static', filename='icones/instagram.png') }}"></a></li>
+                        <li><a href='#'><img src="{{ url_for('static', filename='icones/twitter.png') }}"></a></li>
+                    </ul>
+                </article>
+        </main>
+
+{% endblock %}

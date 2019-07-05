@@ -1,3 +1,5 @@
+import os
+
 from flask import flash, redirect, render_template, request, url_for
 from flask_login import login_required, login_user, logout_user, current_user
 
@@ -7,18 +9,29 @@ from app import db
 from . import auth
 from .forms import LoginForm, RegistrationForm
 
+
 @auth.route('/register', methods=['GET', 'POST'])
 def register():
     form = RegistrationForm()
     if form.validate_on_submit():
         role = Role.query.filter_by(name='READER').first()
-        user = User(name=form.username.data, password=form.password.data, email=form.email.data, userStats='A',
-                    userRole=role.id)
+        file = form.avatar.data
+        avatarName = str(hash(file.filename[:-4])) + file.filename[-4::]
+        file.save(os.path.join('app/static/images/', avatarName))
+        user = User(
+            name=form.username.data,
+            password=form.password.data,
+            email=form.email.data,
+            about_me=form.about_me.data,
+            avatar=avatarName,
+            userStats='A',
+            userRole=role.id
+        )
         db.session.add(user)
         db.session.commit()
         flash('Usuário registrado com sucesso')
         return redirect(url_for('auth.login'))
-    return render_template('auth/cadastro.html', form=form)
+    return render_template('auth/sigin.html', form=form)
 
 
 @auth.route('/login', methods=['GET', 'POST'])

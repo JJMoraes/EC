@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% import "paginatorMacro.html" as macros %}
+
+{% block main %}
+
+<main id="mainNormal" class="mainPrincipal">
+            <section>
+                {% if posts|length > 0 %}
+                    <div>
+                        <p>Artigos relacionados a:<b>{{ search }}</b></p>
+                    </div>
+                    {% for post in posts %}
+                        <article class="secundarios linhaBloco">
+                            <a href="{{ url_for('main.openArticle', title=post.title)}}"><img src="{{ url_for('static', filename='images/%s'%post.image) }}" alt="{{ post.subtitle }}"></a>
+                            <a href="#"><h2>{{ post.title }}</h2></a>
+                            <p class="nomeDataSecundario">{{ post.author }} --- <i>{{ post.date }}</i></p>
+                        </article>
+                    {% endfor %}
+                    <div class="paginator">
+                        {{ macros.pagination_widget(pagination, '.search' ) }}
+                    </div>
+                {% else %}
+                    <div>
+                        <p>Nenhum artigo encontrado com relação a:<b>{{ search }}</b></p>
+                    </div>
+                {% endif %}
+            </section>
+        </main>
+
+{% endblock %}

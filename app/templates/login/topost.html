@@ -4,9 +4,10 @@
 
 {% block main %}
 <main id="mainNormal" class="mainPrincipal">
-    <h1>Escrever Artigo</h1>
-    <br>
-    {{ wtf.quick_form(form) }}
+    <article class="contatos">
+        <h1>{{ nome }}</h1>
+        {{ wtf.quick_form(form) }}
+    </article>
 </main>
 {% endblock %}
 

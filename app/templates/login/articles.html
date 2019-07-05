@@ -1,10 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "login/base_login.html" %}
+{% import "paginatorMacro.html" as macros %}
 
-</body>
-</html>
+{% block main %}
+<main id="mainNormal" class="mainPrincipal">
+    <article class="contatos">
+        <h1>{{ name }}</h1>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Titulo</th>
+                <th scope="col">Data</th>
+                <th scope="col">Autor</th>
+                <th scope="col">Deletar</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for article in articles %}
+                    <tr>
+                        <td><a href="/articles/{{ article.id }}">{{ article.title }}</a></td>
+                        <td>{{ article.date }}</td>
+                        <td>{{ article.name }}</td>
+                        <td><a href="/trash/{{ article.id }}"><img src="{{ url_for('static', filename='icones/trash.png')}}"></a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="paginator">
+                {{ macros.pagination_widget(pagination, '.articles' ) }}
+        </div>
+    </article>
+</main>
+{% endblock %}

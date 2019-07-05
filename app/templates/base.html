@@ -28,7 +28,7 @@
                 </ul>
 
                 <form id="buscaAberta" class="busca" method="POST" action="/search">
-                    <input type="text" name="textoBusca">
+                    <input type="text" name="textSearch">
                     <button form="buscaAberta">BUSCAR</button>
                 </form>
                 <ul class="contato">
@@ -39,7 +39,7 @@
                     <li><a href='/login'>LOGIN</a></li>
                     <li><a href='/register'>CADASTRO</a></li>
                 {% endif %}
-                    <li><a href='/contato'>CONTATO</a></li>
+                    <li><a href='/contact'>CONTATO</a></li>
                 </ul>
             </nav>
 
@@ -62,9 +62,10 @@
                 </div>
             </div>
         </header>
+        {% block menu %}
         <div id="menuEscondido">
             <a href="#" onclick="menuAparece()"><img src="{{ url_for('static', filename='icones/menu.png') }}" alt="Ícone de Menu"></a>
-            <form method="get" action="paginaBusca.html">
+            <form method="get" action="searchPage.html">
                 <input type="text" name="textoBusca" id="campoBusca" class="buscaEsconde" placeholder="Digite sua Busca...">
                 <a href="#" onclick="buscaExpande()"><img src="{{ url_for('static', filename='icones/lupa.png') }}"></a>
             </form>
@@ -74,33 +75,20 @@
                 <nav>
                     <p>Temas</p>
                     <ul>
-                        <li><a href="autores.html">Autores</a></li>
-                        <li><a href='#'>Política</a></li>
-                        <li><a href='#'>Filosofia</a></li>
-                        <li><a href='#'>Reflexões</a></li>
-                        <li><a href='#'>Literatura</a></li>
-                        <li><a href='#'>Cinema</a></li>
-                        <li><a href='#'>Música</a></li>
-                        <li><a href='#'>Esportes</a></li>
-                        <li><a href='#'>Tecnologia</a></li>
-                        <li><a href="#">Saúde</a></li>
-                    </ul>
-                </nav>
-                <nav>
-                    <p>Colunas</p>
-                    <ul>
-                        <li><a href="#">link1</a></li>
-                        <li><a href='#'>link1</a></li>
-                        <li><a href='#'>link1</a></li>
-                        <li><a href='#'>link1</a></li>
-                        <li><a href='#'>link1</a></li>
-                        <li><a href='#'>link1</a></li>
-                        <li><a href='#'>link1</a></li>
-                        <li><a href='#'>link1</a></li>
-                        <li><a href='#'>link1</a></li>
+                        <li><a href="/authors">Autores</a></li>
+                        <li><a href='/categories/Politica'>Política</a></li>
+                        <li><a href='/categories/Filosofia'>Filosofia</a></li>
+                        <li><a href='/categories/Reflexões'>Reflexões</a></li>
+                        <li><a href='/categories/Literatura'>Literatura</a></li>
+                        <li><a href='/categories/Cinema'>Cinema</a></li>
+                        <li><a href='/categories/Música'>Música</a></li>
+                        <li><a href='/categories/Esportes'>Esportes</a></li>
+                        <li><a href='/categories/Tecnologia'>Tecnologia</a></li>
+                        <li><a href="/categories/Saúde">Saúde</a></li>
                     </ul>
                 </nav>
             </section>
+            {% endblock %}
             {% for message in get_flashed_messages() %}
                 <div class="alert alert-warning" style="width: 20%; right: 100px; position: absolute">
                     {{ message }}

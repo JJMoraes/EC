@@ -435,6 +435,15 @@ footer span{
     line-height: 1.5;
 }
 
+.contatos a{
+    color: black;
+}
+
+.contatos a img{
+    width: 28px;
+    height: 28px;
+}
+
 .contatos h1{
     font-size: 1.2em;
     margin-top: 6px;
@@ -450,7 +459,7 @@ footer span{
     display: none;
 }
 
-.contatos form input, .contatos form textarea{
+.contatos form input, .contatos form textarea, .contatos form select{
     width: 100%;
     border: 1px solid red;
     border-radius: 8px;
@@ -514,4 +523,26 @@ footer span{
 
  #containerLogin main a:hover{
      text-decoration: underline;
+ }
+
+ .paginator{
+     text-align: center;
+ }
+
+ .paginator ul{
+     width: 70%;
+     text-align: center;
+     display: inline-block;
+     list-style-type: none;
+ }
+
+ .paginator ul li{
+     margin: 1%;
+     display: inline-block;
+ }
+
+ .paginator ul li a{
+     color: red;
+     font-size: 1em;
+     font-weight: 800;
  }

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% import "paginatorMacro.html" as macros %}
+
+{% block main %}
+
+<main id="mainNormal" class="mainPrincipal">
+            <section>
+                <div>
+                    <p>Autores</p>
+                    <p class="desenho"></p>
+                </div>
+                {% for author in authors %}
+                    <article class="link">
+                        <h1>{{ author.name }}</h1>
+                        <a href="profile/{{ author.name }}" class="linkImagem"><img src="{{ url_for('static', filename='images/%s'%author.avatar) }}" alt="Avatar for {{ author.name }}"></a>
+                        <ul style="display: inline; list-style-type: none">
+                            <li>Username: {{ author.name }}</li>
+                            <li>Email: {{ author.email }}</li>
+                        </ul>
+                        <p class="intro">Sobre mim: {{ author.about_me }}</p>
+                        <ul class="shareIcons">
+                            <li><a href="#"><img src="{{ url_for('static', filename='icones/facebook.png') }}"></a></li>
+                            <li><a href='#'><img src="{{ url_for('static', filename='icones/instagram.png') }}"></a></li>
+                            <li><a href='#'><img src="{{ url_for('static', filename='icones/twitter.png') }}"></a></li>
+                        </ul>
+                        <br>
+                        <hr>
+                    </article>
+                    <br>
+                {% endfor %}
+                <div class="paginator">
+                    {{ macros.pagination_widget(pagination, '.authors') }}
+                </div>
+            </section>
+        </main>
+
+{% endblock %}

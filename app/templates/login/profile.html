@@ -2,16 +2,27 @@
 
 {% block main %}
     <main id="mainNormal" class="mainPrincipal">
-        <article class="contatos">
+        <article class="link">
             <h1>Meu Perfil</h1>
-
+            <a href="profile/{{ user.name }}" class="linkImagem"><img src="{{ url_for('static', filename='images/%s'%user.avatar) }}" alt="Avatar for {{ user.name }}"></a>
             <ul style="display: inline; list-style-type: none">
                 <li>Username: {{ user.name }}</li>
                 <li>Email: {{ user.email }}</li>
                 <li>Status: {{ user.userStats }}</li>
-                <li>Following: xx</li>
-                <li>Followers: xx </li>
+                <li><a href="/following/{{ current_user.name }}" class="font-weight-bold">Following:</a> {{ following }}</li>
+                <li><a href="/followers/{{ current_user.name }}" class="font-weight-bold">Followers:</a> {{ followers }} </li>
+                {% if not(current_user == user) %}
+                    {% if user.is_following(current_user)%}
+                    <li><a>Follows you</a></li>
+                    {% endif %}
+                    {% if current_user.is_following(user)%}
+                    <li><a href="/unfollow/{{ user.name }}" class="btn btn-dark">Unfollow</a></li>
+                    {% else %}
+                        <li><a href="/follow/{{ user.name }}" class="btn btn-dark">Follow</a></li>
+                    {% endif %}
+                {% endif %}
             </ul>
+            <p class="intro">Sobre mim: {{ user.about_me }}</p>
             <br>
             <hr>
             <br>
@@ -19,7 +30,7 @@
                 <a href="{{ url_for('.edit_profile') }}" class="btn btn-dark">Editar</a>
             {% endif %}
             {% if current_user.is_administrator() %}
-                <a href="{{ url_for('.edit_profile_admin', id=user.id) }}" class="btn btn-danger">
+                <a href="{{ url_for('.edit_profile_admin', idUser=user.id) }}" class="btn btn-danger">
                     Editar [ADMIN]
                 </a>
             {% endif %}

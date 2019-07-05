@@ -1,124 +1,29 @@
 {% extends "base.html" %}
 
 {% block main %}
-
-<main id="mainNormal" class="mainPrincipal">
-                <section>
-                    <div>
-                        <p>Principais</p>
-                        <p class="desenho"></p>
-                    </div>
-                    <article class="principal">
-                        <a href="materiaAberta.html"><img src="icones/homem.jpg" alt="Homem Ajustando a Gravata"></a>
-                        <a href="#"><h1>Masculinade Frágil - A falácia dos oprimidos opressores</h1></a>
-                        <p class="nomeDataPrincipal">Jean Moraes --- <i>05/01/2019</i></p>
-                        <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu nunc, pharetra eget porta nec, mattis ut urna. Maecenas augue erat, iaculis vitae vestibulum eget, maximus sed dui.</p>
-                    </article>
+    <main id="mainNormal" class="mainPrincipal">
+        {% for section in sections %}
+            <section>
+                <div>
+                    <p>{{ section }}</p>
+                    <p class="desenho"></p>
+                </div>
+                <article class="principal">
+                    <a href="{{ url_for('main.openArticle', title=sections[section][0][0].title).replace('%20', '_') }}"><img src="{{ url_for('static', filename='images/%s'%sections[section][0][0].image) }}" alt=""></a>
+                    <a href="{{ url_for('main.openArticle', title=sections[section][0][0].title).replace('%20', '_') }}"><h1>{{ sections[section][0][0].title }}</h1></a>
+                    <p class="nomeDataPrincipal">{{ sections[section][0][1].name }} --- <i>{{ sections[section][0][0].date }}</i></p>
+                    <p class="intro">{{ sections[section][0][0].lide }}</p>
+                </article>
+                {% for i in range(1, 4) %}
                     <article class="secundarios">
-                        <a href="#"><img src="icones/homem.jpg" alt="Homem Ajustando a Gravata"></a>
-                        <a href="#"><h2>Masculinade Frágil - A falácia dos oprimidos opressores</h2></a>
-                        <p class="nomeDataSecundario">Jean Moraes --- <i>05/01/2019</i></p>
+                        <a href="{{ url_for('main.openArticle', title=sections[section][i][0].title).replace('%20', '_') }}"><img src="{{ url_for('static', filename='images/%s'%sections[section][i][0].image) }}" alt=""></a>
+                        <a href="{{ url_for('main.openArticle', title=sections[section][i][0].title).replace('%20', '_') }}"><h1>{{ sections[section][i][0].title }}</h1></a>
+                        <p class="nomeDataSecundario">{{ sections[section][i][1].name }} --- <i>{{ sections[section][i][0].date }}</i></p>
                     </article>
-                    <article class="secundarios">
-                        <a href="#"><img src="icones/homem.jpg" alt="Homem Ajustando a Gravata"></a>
-                        <a href="#"><h2>Masculinade Frágil - A falácia dos oprimidos opressores</h2></a>
-                        <p class="nomeDataSecundario">Jean Moraes --- <i>05/01/2019</i></p>
-                    </article>
-                    <article class="secundarios">
-                        <a href="#"><img src="icones/homem.jpg" alt="Homem Ajustando a Gravata"></a>
-                        <a href="#"><h2>Masculinade Frágil - A falácia dos oprimidos opressores</h2></a>
-                        <p class="nomeDataSecundario">Jean Moraes --- <i>05/01/2019</i></p>
-                    </article>
-                    <br>
-                    <hr>
-                </section>
-                <section>
-                    <div>
-                        <p>Principais</p>
-                        <p class="desenho"></p>
-                    </div>
-                    <article class="principal">
-                        <a href="#"><img src="icones/homem.jpg" alt="Homem Ajustando a Gravata"></a>
-                        <a href="#"><h1>Masculinade Frágil - A falácia dos oprimidos opressores</h1></a>
-                        <p class="nomeDataPrincipal">Jean Moraes --- <i>05/01/2019</i></p>
-                        <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu nunc, pharetra eget porta nec, mattis ut urna. Maecenas augue erat, iaculis vitae vestibulum eget, maximus sed dui.</p>
-                    </article>
-                    <article class="secundarios">
-                        <a href="#"><img src="icones/homem.jpg" alt="Homem Ajustando a Gravata"></a>
-                        <a href="#"><h2>Masculinade Frágil - A falácia dos oprimidos opressores</h2></a>
-                        <p class="nomeDataSecundario">Jean Moraes --- <i>05/01/2019</i></p>
-                    </article>
-                    <article class="secundarios">
-                        <a href="#"><img src="icones/homem.jpg" alt="Homem Ajustando a Gravata"></a>
-                        <a href="#"><h2>Masculinade Frágil - A falácia dos oprimidos opressores</h2></a>
-                        <p class="nomeDataSecundario">Jean Moraes --- <i>05/01/2019</i></p>
-                    </article>
-                    <article class="secundarios">
-                        <a href="#"><img src="icones/homem.jpg" alt="Homem Ajustando a Gravata"></a>
-                        <a href="#"><h2>Masculinade Frágil - A falácia dos oprimidos opressores</h2></a>
-                        <p class="nomeDataSecundario">Jean Moraes --- <i>05/01/2019</i></p>
-                    </article>
-                    <br>
-                    <hr>
-                </section>
-                <section>
-                    <div>
-                        <p>Principais</p>
-                        <p class="desenho"></p>
-                    </div>
-                    <article class="principal">
-                        <a href="#"><img src="icones/homem.jpg" alt="Homem Ajustando a Gravata"></a>
-                        <a href="#"><h1>Masculinade Frágil - A falácia dos oprimidos opressores</h1></a>
-                        <p class="nomeDataPrincipal">Jean Moraes --- <i>05/01/2019</i></p>
-                        <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu nunc, pharetra eget porta nec, mattis ut urna. Maecenas augue erat, iaculis vitae vestibulum eget, maximus sed dui.</p>
-                    </article>
-                    <article class="secundarios">
-                        <a href="#"><img src="icones/homem.jpg" alt="Homem Ajustando a Gravata"></a>
-                        <a href="#"><h2>Masculinade Frágil - A falácia dos oprimidos opressores</h2></a>
-                        <p class="nomeDataSecundario">Jean Moraes --- <i>05/01/2019</i></p>
-                    </article>
-                    <article class="secundarios">
-                        <a href="#"><img src="icones/homem.jpg" alt="Homem Ajustando a Gravata"></a>
-                        <a href="#"><h2>Masculinade Frágil - A falácia dos oprimidos opressores</h2></a>
-                        <p class="nomeDataSecundario">Jean Moraes --- <i>05/01/2019</i></p>
-                    </article>
-                    <article class="secundarios">
-                        <a href="#"><img src="icones/homem.jpg" alt="Homem Ajustando a Gravata"></a>
-                        <a href="#"><h2>Masculinade Frágil - A falácia dos oprimidos opressores</h2></a>
-                        <p class="nomeDataSecundario">Jean Moraes --- <i>05/01/2019</i></p>
-                    </article>
-                    <br>
-                    <hr>
-                </section>
-                <section>
-                    <div>
-                        <p>Principais</p>
-                        <p class="desenho"></p>
-                    </div>
-                    <article class="principal">
-                        <a href="#"><img src="icones/homem.jpg" alt="Homem Ajustando a Gravata"></a>
-                        <a href="#"><h1>Masculinade Frágil - A falácia dos oprimidos opressores</h1></a>
-                        <p class="nomeDataPrincipal">Jean Moraes --- <i>05/01/2019</i></p>
-                        <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu nunc, pharetra eget porta nec, mattis ut urna. Maecenas augue erat, iaculis vitae vestibulum eget, maximus sed dui.</p>
-                    </article>
-                    <article class="secundarios">
-                        <a href="#"><img src="icones/homem.jpg" alt="Homem Ajustando a Gravata"></a>
-                        <a href="#"><h2>Masculinade Frágil - A falácia dos oprimidos opressores</h2></a>
-                        <p class="nomeDataSecundario">Jean Moraes --- <i>05/01/2019</i></p>
-                    </article>
-                    <article class="secundarios">
-                        <a href="#"><img src="icones/homem.jpg" alt="Homem Ajustando a Gravata"></a>
-                        <a href="#"><h2>Masculinade Frágil - A falácia dos oprimidos opressores</h2></a>
-                        <p class="nomeDataSecundario">Jean Moraes --- <i>05/01/2019</i></p>
-                    </article>
-                    <article class="secundarios">
-                        <a href="#"><img src="icones/homem.jpg" alt="Homem Ajustando a Gravata"></a>
-                        <a href="#"><h2>Masculinade Frágil - A falácia dos oprimidos opressores</h2></a>
-                        <p class="nomeDataSecundario">Jean Moraes --- <i>05/01/2019</i></p>
-                    </article>
-                    <br>
-                    <hr>
-                </section>
-            </main>
-
+                {% endfor %}
+                <br>
+                <hr>
+            </section>
+        {% endfor %}
+    </main>
 {% endblock %}

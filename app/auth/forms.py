@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import PasswordField, StringField, SubmitField, ValidationError
+from wtforms import PasswordField, StringField, SubmitField, ValidationError, FileField, TextAreaField
 from wtforms.validators import DataRequired, EqualTo, Length
 
 from app.models import User
@@ -10,6 +10,12 @@ class RegistrationForm(FlaskForm):
         DataRequired(), Length(1, 64)
     ])
     email = StringField('', render_kw={"placeholder":"E-mail"}, validators=[
+        DataRequired()
+    ])
+    avatar = FileField('', render_kw={"placeholder":"Avatar"}, validators=[
+        DataRequired()
+    ])
+    about_me = TextAreaField('', render_kw={"placeholder":"Sobre você"}, validators=[
         DataRequired()
     ])
     password = PasswordField('', render_kw={"placeholder":"Senha"}, validators=[
